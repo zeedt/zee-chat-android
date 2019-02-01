@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="input_field">#FFFFFF</color>
+    <color name="circle_login_end_color">#DE5CFF</color>
+    <color name="circle_login_start_color">#8A00FF</color>
+    <color name="login_button_background">#C57DFF</color>
+    <color name="hint_text_color">#898989</color>
+    <color name="input_text_color">#898989</color>
+    <color name="background_color">#ffffff</color>
+</resources>

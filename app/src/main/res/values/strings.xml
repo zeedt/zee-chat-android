@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ZeeChat</string>
+    <string name="title_activity_contact">ContactActivity</string>
+</resources>
