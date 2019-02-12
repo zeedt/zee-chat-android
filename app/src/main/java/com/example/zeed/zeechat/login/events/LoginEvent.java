@@ -1,7 +1,7 @@
 package com.example.zeed.zeechat.login.events;
 
 
-import com.example.zeed.zeechat.login.apimodel.LoginResponse;
+import com.example.zeed.zeechat.login.apimodel.LoginErrorResponse;
 
 public class LoginEvent {
 
@@ -9,20 +9,20 @@ public class LoginEvent {
 
     private boolean successful;
 
-    private LoginResponse loginResponse;
+    private LoginErrorResponse loginResponse;
 
     public LoginEvent(String errorMessage, boolean successful) {
         this.errorMessage = errorMessage;
         this.successful = successful;
     }
 
-    public LoginEvent(String errorMessage, boolean successful, LoginResponse loginResponse) {
+    public LoginEvent(String errorMessage, boolean successful, LoginErrorResponse loginResponse) {
         this.errorMessage = errorMessage;
         this.successful = successful;
         this.loginResponse = loginResponse;
     }
 
-    public LoginEvent(boolean successful, LoginResponse loginResponse) {
+    public LoginEvent(boolean successful, LoginErrorResponse loginResponse) {
         this.successful = successful;
         this.loginResponse = loginResponse;
     }
@@ -43,11 +43,11 @@ public class LoginEvent {
         this.successful = successful;
     }
 
-    public LoginResponse getLoginResponse() {
+    public LoginErrorResponse getLoginResponse() {
         return loginResponse;
     }
 
-    public void setLoginResponse(LoginResponse loginResponse) {
+    public void setLoginResponse(LoginErrorResponse loginResponse) {
         this.loginResponse = loginResponse;
     }
 }

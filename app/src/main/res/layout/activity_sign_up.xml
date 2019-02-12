@@ -34,6 +34,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="120dp"
                 app:hintEnabled="true"
+                android:focusableInTouchMode="true"
                 android:textColorHint="@color/hint_text_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -62,6 +63,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="40dp"
                 app:hintEnabled="true"
+                android:focusableInTouchMode="true"
                 android:paddingLeft="@dimen/text_input_layout_padding"
                 app:layout_constraintTop_toBottomOf="@id/username"
                 android:id="@+id/email"
@@ -91,6 +93,7 @@
                 android:layout_marginTop="40dp"
                 app:hintEnabled="true"
                 android:paddingLeft="@dimen/text_input_layout_padding"
+                android:focusableInTouchMode="true"
                 app:layout_constraintTop_toBottomOf="@id/email"
                 android:id="@+id/password"
                 android:textColorHint="@color/hint_text_color"
@@ -119,6 +122,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="40dp"
                 app:hintEnabled="true"
+                android:focusableInTouchMode="true"
                 android:paddingLeft="@dimen/text_input_layout_padding"
                 android:textColorHint="@color/hint_text_color"
                 android:background="@drawable/login_input_field"
@@ -139,6 +143,62 @@
 
             </android.support.design.widget.TextInputLayout>
 
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/firstName"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                app:hintEnabled="true"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="@dimen/text_input_layout_padding"
+                android:textColorHint="@color/hint_text_color"
+                android:background="@drawable/login_input_field"
+                app:layout_constraintTop_toBottomOf="@id/confirmPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_input_field_height"
+                    android:textSize="@dimen/input_field_text_size"
+                    android:hint="First name"
+                    android:background="@null"
+                    android:textColor="@color/input_text_color"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:id="@+id/lastName"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                app:hintEnabled="true"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="@dimen/text_input_layout_padding"
+                android:textColorHint="@color/hint_text_color"
+                android:background="@drawable/login_input_field"
+                app:layout_constraintTop_toBottomOf="@id/firstName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_input_field_height"
+                    android:textSize="@dimen/input_field_text_size"
+                    android:hint="Last name"
+                    android:background="@null"
+                    android:textColor="@color/input_text_color"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
 
             <Button
                 android:id="@+id/login_button"
@@ -149,11 +209,12 @@
                 android:layout_marginTop="50dp"
                 android:background="@drawable/login_button"
                 android:text="SignUp"
+                android:onClick="signUp"
                 android:textSize="15dp"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/confirmPassword" />
+                app:layout_constraintTop_toBottomOf="@id/lastName" />
 
 
         </android.support.constraint.ConstraintLayout>
