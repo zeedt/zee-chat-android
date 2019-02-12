@@ -4,6 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/login_scroll_view"
+    android:visibility="gone"
     android:background="@color/background_color"
     tools:context="com.example.zeed.zeechat.MainActivity"
     android:layout_height="match_parent">
@@ -11,8 +13,13 @@
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="30dp">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:layout_marginTop="30dp"
-    android:id="@+id/parent_constraint_layout" >
+    android:id="@+id/parent_constraint_layout"  >
 
 
     <android.support.constraint.ConstraintLayout
@@ -21,6 +28,7 @@
         android:layout_height="wrap_content"
         android:paddingBottom="30dp"
         android:paddingLeft="10dp"
+        android:focusableInTouchMode="true"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="109.5dp"
@@ -36,6 +44,8 @@
             android:theme="@style/TextInputLagerAppearnce"
             android:paddingLeft="@dimen/text_input_layout_padding"
             android:layout_marginStart="24dp"
+            android:focusedByDefault="false"
+
             android:layout_marginTop="120dp"
             android:background="@drawable/login_input_field"
             app:layout_constraintTop_toTopOf="parent"
@@ -61,6 +71,9 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:focusedByDefault="false"
+            android:focusableInTouchMode="true"
+            android:focusable="false"
             android:layout_marginEnd="24dp"
             android:theme="@style/TextInputLagerAppearnce"
             android:paddingLeft="@dimen/text_input_layout_padding"
@@ -93,6 +106,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="50dp"
+            android:focusable="false"
             android:background="@drawable/login_button"
             android:text="Login"
             android:onClick="validateAndSignInUser"
@@ -158,4 +172,20 @@
 
 
 </android.support.constraint.ConstraintLayout>
+
+    <ProgressBar
+        android:id="@+id/contentLoadingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:indeterminate="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
+
 </ScrollView>
